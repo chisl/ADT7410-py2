@@ -231,7 +231,7 @@ class ADT7410_Base:
 	
 	# Bits REVISION_ID
 	# Revision ID Contains the silicon revision identification number 
-	# Bits MANUFACTUR_ID
+	# Bits MANUFACTURER_ID
 	# Manufacture ID Contains the manufacturer identification number 
 	# Register RESET
 	# Software reset: Address pointer word as a command word to reset the part and
@@ -242,10 +242,10 @@ class ADT7410_Base:
 	
 	def setRESET(self, val):
 		"""Set register RESET"""
-		self.write(REG.RESET, val, 8)
+		self.write(REG.RESET, val, 0)
 	
 	def getRESET(self):
 		"""Get register RESET"""
-		return self.read(REG.RESET, 8)
+		return self.read(REG.RESET, 0)
 	
 	# Bits RESET
